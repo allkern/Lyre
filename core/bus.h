@@ -15,7 +15,7 @@ class bus {
 public:
   bus() {
     devices.push_back(&_memory_);
-    devices.push_back(new console<40, 30>);
+    // devices.push_back(new console<40, 30>);
   }
 
   void joinAllThreads() { for (device* d : devices) { d->joinThread(); } }

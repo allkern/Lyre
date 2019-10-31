@@ -4,7 +4,6 @@
 #include <string>
 #include <thread>
 #include <chrono>
-#include <array>
 
 #include "global.h"
 #include "bus.h"
@@ -38,38 +37,38 @@ class cpu {
   // Get a RAM address by value
   u16 read(u16 addr) { return Bus.rb(addr); }
 
-  u16 rsetr(u16& a, u16& b) 	{ a  = b; return a; }
-  u16 raddr(u16& a, u16& b) 	{ a += b; return a; }
-  u16 rsubr(u16& a, u16& b) 	{ a -= b; return a; }
-  u16 rmulr(u16& a, u16& b) 	{ a *= b; return a; }
-  u16 rdivr(u16& a, u16& b) 	{ a /= b; return a; }
-  u16 randr(u16& a, u16& b) 	{ a &= b; return a; }
-  u16 rorr (u16& a, u16& b) 	{ a |= b; return a; }
-  u16 rxorr(u16& a, u16& b)	  { a ^= b; return a; }
-  u16 rsetr(u8 & a, u8 & b) 	{ a  = b; return a; }
-  u16 raddr(u8 & a, u8 & b) 	{ a += b; return a; }
-  u16 rsubr(u8 & a, u8 & b) 	{ a -= b; return a; }
-  u16 rmulr(u8 & a, u8 & b) 	{ a *= b; return a; }
-  u16 rdivr(u8 & a, u8 & b) 	{ a /= b; return a; }
-  u16 randr(u8 & a, u8 & b) 	{ a &= b; return a; }
-  u16 rorr (u8 & a, u8 & b) 	{ a |= b; return a; }
-  u16 rxorr(u8 & a, u8 & b)	  { a ^= b; return a; }
-  u16 rset (u16& a, u16  b) 	{ a  = b; return a; }
-  u16 radd (u16& a, u16  b) 	{ a += b; return a; }
-  u16 rsub (u16& a, u16  b) 	{ a -= b; return a; }
-  u16 rmul (u16& a, u16  b) 	{ a *= b; return a; }
-  u16 rdiv (u16& a, u16  b) 	{ a /= b; return a; }
-  u16 rand (u16& a, u16  b) 	{ a &= b; return a; }
-  u16 ror  (u16& a, u16  b) 	{ a |= b; return a; }
-  u16 rxor (u16& a, u16  b)	  { a ^= b; return a; }
-  u16 rset (u8 & a, u8   b) 	{ a  = b; return a; }
-  u16 radd (u8 & a, u8   b) 	{ a += b; return a; }
-  u16 rsub (u8 & a, u8   b) 	{ a -= b; return a; }
-  u16 rmul (u8 & a, u8   b) 	{ a *= b; return a; }
-  u16 rdiv (u8 & a, u8   b) 	{ a /= b; return a; }
-  u16 rand (u8 & a, u8   b) 	{ a &= b; return a; }
-  u16 ror  (u8 & a, u8   b) 	{ a |= b; return a; }
-  u16 rxor (u8 & a, u8   b)	  { a ^= b; return a; }
+  u16 rsetr(u16& a, u16& b) { a  = b; return a; }
+  u16 raddr(u16& a, u16& b) { a += b; return a; }
+  u16 rsubr(u16& a, u16& b) { a -= b; return a; }
+  u16 rmulr(u16& a, u16& b) { a *= b; return a; }
+  u16 rdivr(u16& a, u16& b) { a /= b; return a; }
+  u16 randr(u16& a, u16& b) { a &= b; return a; }
+  u16 rorr (u16& a, u16& b) { a |= b; return a; }
+  u16 rxorr(u16& a, u16& b)	{ a ^= b; return a; }
+  u16 rsetr(u8 & a, u8 & b) { a  = b; return a; }
+  u16 raddr(u8 & a, u8 & b) { a += b; return a; }
+  u16 rsubr(u8 & a, u8 & b) { a -= b; return a; }
+  u16 rmulr(u8 & a, u8 & b) { a *= b; return a; }
+  u16 rdivr(u8 & a, u8 & b) { a /= b; return a; }
+  u16 randr(u8 & a, u8 & b) { a &= b; return a; }
+  u16 rorr (u8 & a, u8 & b) { a |= b; return a; }
+  u16 rxorr(u8 & a, u8 & b)	{ a ^= b; return a; }
+  u16 rset (u16& a, u16  b) { a  = b; return a; }
+  u16 radd (u16& a, u16  b) { a += b; return a; }
+  u16 rsub (u16& a, u16  b) { a -= b; return a; }
+  u16 rmul (u16& a, u16  b) { a *= b; return a; }
+  u16 rdiv (u16& a, u16  b) { a /= b; return a; }
+  u16 rand (u16& a, u16  b) { a &= b; return a; }
+  u16 ror  (u16& a, u16  b) { a |= b; return a; }
+  u16 rxor (u16& a, u16  b)	{ a ^= b; return a; }
+  u16 rset (u8 & a, u8   b) { a  = b; return a; }
+  u16 radd (u8 & a, u8   b) { a += b; return a; }
+  u16 rsub (u8 & a, u8   b) { a -= b; return a; }
+  u16 rmul (u8 & a, u8   b) { a *= b; return a; }
+  u16 rdiv (u8 & a, u8   b) { a /= b; return a; }
+  u16 rand (u8 & a, u8   b) { a &= b; return a; }
+  u16 ror  (u8 & a, u8   b) { a |= b; return a; }
+  u16 rxor (u8 & a, u8   b) { a ^= b; return a; }
   u16 radd2(u16& a, u16& b, u16& c) { a = b + c; return a; }
   u16 rsub2(u16& a, u16& b, u16& c) { a = b - c; return a; }
   u16 rmul2(u16& a, u16& b, u16& c) { a = b * c; return a; }
@@ -77,10 +76,10 @@ class cpu {
   u16 rand2(u16& a, u16& b, u16& c) { a = b & c; return a; }
   u16 ror2 (u16& a, u16& b, u16& c) { a = b | c; return a; }
   u16 rxor2(u16& a, u16& b, u16& c) { a = b ^ c; return a; }
-  u16 radds(u16& a, s8   b) 	{ a += b; return a; }
-  u16 rsubs(u16& a, s8   b) 	{ a -= b; return a; }
-  u16 rmuls(u16& a, s8   b) 	{ a *= b; return a; }
-  u16 rdivs(u16& a, s8   b) 	{ a /= b; return a; }
+  u16 radds(u16& a, s8   b) { a += b; return a; }
+  u16 rsubs(u16& a, s8   b) { a -= b; return a; }
+  u16 rmuls(u16& a, s8   b) { a *= b; return a; }
+  u16 rdivs(u16& a, s8   b) { a /= b; return a; }
 
   // Main CPU loop
   void loop() {
